@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fabienne Rangeard – Chargée de la démarche qualité</title>
+<meta name="description" content="Fabienne Rangeard, chargée de la démarche qualité en formation : suivi qualité de parcours RNCP, audits Qualiopi, indicateurs et tableaux de bord, amélioration continue.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #2B3654;
+    --slate: #4A5A82;
+    --peach: #FBE6D9;
+    --peach-deep: #E9B99C;
+    --paper: #FFFDFB;
+    --text: #2E3240;
+    --muted: #5C6375;
+    --rule: #E4DCD6;
+    --serif: "Literata", Georgia, "Times New Roman", serif;
+    --sans: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --ink: #E8ECF7;
+      --slate: #A9B8DD;
+      --peach: #2A2A33;
+      --peach-deep: #C98F6E;
+      --paper: #1B1D24;
+      --text: #DEE0E7;
+      --muted: #A3A8B6;
+      --rule: #343744;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  a { color: var(--slate); text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  a:focus-visible { outline: 2px solid var(--peach-deep); outline-offset: 3px; border-radius: 2px; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  /* Colonne latérale */
+  aside {
+    background: var(--peach);
+    padding: 3.5rem 2rem 3rem;
+  }
+  .aside-inner { position: sticky; top: 2rem; }
+  aside h2 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 .6rem;
+  }
+  aside h2:first-child { margin-top: 0; }
+  aside ul { list-style: none; margin: 0; padding: 0; }
+  aside li { padding: .2rem 0; color: var(--text); }
+  aside p { margin: 0; }
+  .langs li { display: flex; justify-content: space-between; gap: 1rem; }
+  .langs span:last-child { color: var(--muted); }
+  .tools { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tools li {
+    padding: .15rem .6rem;
+    border: 1px solid var(--peach-deep);
+    border-radius: 999px;
+    font-size: .9rem;
+  }
+  .contact li { word-break: break-word; }
+
+  /* Contenu principal */
+  main { padding: 3.5rem clamp(1.5rem, 5vw, 4.5rem) 4rem; }
+  header.hero { max-width: 44rem; margin-bottom: 3.5rem; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 .6rem;
+  }
+  .hero .role {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    color: var(--slate);
+    margin: 0 0 1.6rem;
+  }
+  .hero .intro { margin: 0; max-width: 38rem; }
+
+  section { margin-bottom: 3.5rem; }
+  section > h2 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 1.5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--peach-deep);
+    display: inline-block;
+  }
+
+  /* Parcours : une vraie chronologie */
+  .timeline { position: relative; margin: 0; padding: 0; list-style: none; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: .5rem; bottom: .5rem;
+    width: 2px;
+    background: var(--rule);
+  }
+  .job { position: relative; padding-left: 2.2rem; margin-bottom: 2.6rem; }
+  .job::before {
+    content: "";
+    position: absolute;
+    left: 0; top: .45rem;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 3px solid var(--slate);
+  }
+  .job.current::before { background: var(--slate); }
+  .job-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem 1rem; }
+  .job h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+  }
+  .when { color: var(--muted); font-size: .95rem; white-space: nowrap; }
+  .where { color: var(--muted); margin: .1rem 0 .9rem; }
+
+  .post { margin-top: 1.1rem; max-width: 44rem; }
+  .post h4 {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--slate);
+    margin: 0 0 .4rem;
+  }
+  .post h4 .when { font-weight: 400; margin-left: .4rem; }
+  .post ul { margin: 0; padding-left: 1.15rem; }
+  .post li { margin-bottom: .35rem; }
+  .post li::marker { color: var(--peach-deep); }
+
+  /* Formations */
+  .degrees { list-style: none; margin: 0; padding: 0; max-width: 44rem; }
+  .degrees li {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1rem;
+    padding: .8rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .degrees li:last-child { border-bottom: 1px solid var(--rule); }
+  .degrees .year { font-family: var(--serif); font-weight: 600; color: var(--slate); }
+  .degrees strong { display: block; font-weight: 700; color: var(--text); }
+  .degrees em { color: var(--muted); }
+
+  footer { color: var(--muted); font-size: .9rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+
+  /* Mobile */
+  @media (max-width: 820px) {
+    .layout { grid-template-columns: 1fr; }
+    aside { order: 2; padding: 2.5rem 1.5rem; }
+    .aside-inner { position: static; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 2rem; }
+    aside h2:first-child, aside h2 { margin-top: 1.5rem; }
+    main { padding-top: 2.5rem; }
+  }
+
+  /* Impression : la page sert aussi de CV imprimable */
+  @media print {
+    :root { --paper: #fff; --peach: #fff; }
+    body { font-size: 10.5pt; }
+    .layout { grid-template-columns: 220px 1fr; min-height: 0; }
+    aside { padding: 1rem; }
+    main { padding: 1rem 1.5rem; }
+    .job, .degrees li { break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <main>
+    <header class="hero">
+      <h1>Fabienne Rangeard</h1>
+      <p class="role">Chargée de la démarche qualité</p>
+      <p class="intro">Professionnelle de l’assurance qualité en formation, avec plus de 10 ans d’expérience dans l’éducation. Je pilote des démarches d’amélioration continue fondées sur des données : suivi qualité de parcours certifiants RNCP, audits et constitution de preuves Qualiopi, analyse de la progression et de l’insertion des apprenants, tableaux de bord et bilans. Rigoureuse, avec un esprit d’analyse et de synthèse, je fais le lien entre les équipes pédagogiques, le service support et les responsables de formation pour transformer les constats en actions suivies.</p>
+    </header>
+
+    <section aria-labelledby="parcours">
+      <h2 id="parcours">Expérience</h2>
+      <ol class="timeline">
+
+        <li class="job current">
+          <div class="job-head">
+            <h3>OpenClassrooms</h3>
+            <span class="when">2021 – aujourd’hui</span>
+          </div>
+          <p class="where">France</p>
+
+          <div class="post">
+            <h4>Chargée assurance qualité pédagogique <span class="when">depuis 2023</span></h4>
+            <ul>
+              <li>Suivi qualité de 15 à 20 parcours certifiants RNCP : révision des scénarios pédagogiques et des contenus, identification de points d’attention, propositions d’amélioration.</li>
+              <li>Création et mise à jour de procédures et checklists qualité, et accompagnement de leur adoption par les équipes.</li>
+              <li>Animation de sessions de calibration pour harmoniser les pratiques.</li>
+              <li>Suivi d’indicateurs et maintenance de tableaux de bord (Tableau, Looker Studio) : analyse de tendances, identification des risques et recommandations.</li>
+              <li>Analyse de l’impact des parcours (qualité pédagogique, progression et insertion des apprenants) et rédaction de bilans qualité.</li>
+              <li>Participation à l’audit annuel d’un catalogue de 500+ cours, pilotage de l’audit qualitatif de 600 soutenances par an, constitution de preuves pour les audits Qualiopi.</li>
+              <li>Gestion de projets d’assurance qualité : pilotage de chantiers trimestriels thématiques, identification d’alertes, réunions de suivi, comptes rendus et plans d’action.</li>
+              <li>Traitement des retours apprenants et mentors dans les délais définis : priorisation, suivi des corrections, repérage de tendances pour orienter les évolutions.</li>
+              <li>Intégration de l’IA : traitement de volumes massifs de retours apprenants (rapports de tendances, tickets d’action), automatisation des audits de soutenances.</li>
+              <li>Collaboration avec 5 ingénieurs pédagogiques, 3 responsables de formation et 15 experts métiers. Interface stratégique avec les équipes support et conception des formations.</li>
+            </ul>
+          </div>
+
+          <div class="post">
+            <h4>Cheffe d’équipe de traduction <span class="when">2022 – 2023</span></h4>
+            <ul>
+              <li>Encadrement et accompagnement d’une équipe de 3 chefs de projets de traduction.</li>
+              <li>Coordination de la charge de travail de l’équipe et amélioration des processus.</li>
+            </ul>
+          </div>
+
+          <div class="post">
+            <h4>Cheffe de projets de traduction <span class="when">2021 – 2022</span></h4>
+            <ul>
+              <li>Gestion de projets de traduction et d’adaptation culturelle de contenus éducatifs.</li>
+              <li>Coordination des parties prenantes internes et externes.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-head">
+            <h3>The Weald Community School</h3>
+            <span class="when">2014 – 2021</span>
+          </div>
+          <p class="where">Angleterre</p>
+          <div class="post">
+            <h4>Enseignante de langues vivantes (espagnol et français)</h4>
+            <ul>
+              <li>Conception, animation et évaluation de séquences pédagogiques auprès de publics hétérogènes de 11 à 18 ans.</li>
+              <li>Élaboration d’évaluations formatives et sommatives, et mesure de l’atteinte des objectifs pédagogiques.</li>
+              <li>Mise en place d’un apprentissage différencié et suivi individualisé des apprenants.</li>
+              <li>Préparation aux examens nationaux de fin de cycle.</li>
+              <li>Coordination pédagogique du premier cycle de collège et harmonisation des pratiques pour l’ensemble du département de langues étrangères.</li>
+              <li>Professeure principale au lycée : accompagnement des projets postsecondaires.</li>
+              <li>Participation régulière à des initiatives de développement professionnel.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-head">
+            <h3>Expériences antérieures</h3>
+            <span class="when">1997 – 2012</span>
+          </div>
+          <p class="where">Angleterre</p>
+          <div class="post">
+            <h4>Cheffe de projets de localisation, Motorola Mobility <span class="when">2007 – 2012</span></h4>
+            <ul>
+              <li>Pilotage de projets de localisation de l’anglais vers 25 langues : tests linguistiques et contrôle qualité, gestion des prestataires et des parties prenantes.</li>
+            </ul>
+          </div>
+          <div class="post">
+            <h4>Cheffe de projets de traduction, ITR Ltd. <span class="when">1997 – 2006</span></h4>
+            <ul>
+              <li>Gestion de projets de traduction multilingues et coordination de prestataires.</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <section aria-labelledby="formations">
+      <h2 id="formations">Formations</h2>
+      <ul class="degrees">
+        <li><span class="year">2025</span><span><strong>L’IA au service de l’ingénierie pédagogique</strong><em>Formation interne, OpenClassrooms</em></span></li>
+        <li><span class="year">2014</span><span><strong>Qualified Teacher Status et PGCE (sciences de l’éducation)</strong><em>University of Sussex, Brighton, Angleterre</em></span></li>
+        <li><span class="year">1998</span><span><strong>Master of Arts, Applied Linguistics (bac +5)</strong><em>Birkbeck College, University of London, Angleterre</em></span></li>
+        <li><span class="year">1992</span><span><strong>Licence LLCE</strong><em>Université Catholique de l’Ouest, Angers</em></span></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Fabienne Rangeard</p>
+    </footer>
+  </main>
+
+  <aside aria-label="Informations complémentaires">
+    <div class="aside-inner">
+      <div>
+        <h2>Contact</h2>
+        <ul class="contact">
+          <li><a href="mailto:frangeard@gmail.com">frangeard@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/frangeard" rel="noopener">linkedin.com/in/frangeard</a></li>
+          <li>Chantepie (35)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Langues</h2>
+        <ul class="langs">
+          <li><span>Français</span><span>langue maternelle</span></li>
+          <li><span>Anglais</span><span>bilingue</span></li>
+          <li><span>Espagnol</span><span>avancé</span></li>
+          <li><span>Allemand</span><span>intermédiaire</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Savoir-faire</h2>
+        <ul>
+          <li>Démarche qualité et amélioration continue</li>
+          <li>Formalisation de procédures</li>
+          <li>Suivi de plans d’action</li>
+          <li>Réalisation d’audits</li>
+          <li>Constitution de preuves (Qualiopi)</li>
+          <li>Suivi d’indicateurs</li>
+          <li>Maintenance de tableaux de bord</li>
+          <li>Rédaction de bilans et de comptes rendus</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Savoir-être</h2>
+        <ul>
+          <li>Rigueur et sens du détail</li>
+          <li>Sens de l’organisation</li>
+          <li>Capacité d’analyse et de synthèse</li>
+          <li>Esprit d’équipe</li>
+          <li>Aisance rédactionnelle</li>
+          <li>Adaptabilité et fiabilité</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Outils numériques</h2>
+        <ul class="tools">
+          <li>MS Office</li>
+          <li>Google Workspace</li>
+          <li>Notion</li>
+          <li>Tableau</li>
+          <li>Looker Studio</li>
+          <li>Gemini</li>
+          <li>Notion AI</li>
+          <li>Claude</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+</div>
+</body>
+</html>
