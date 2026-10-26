@@ -60,6 +60,10 @@
     min-height: 100vh;
   }
 
+  /* Placement explicite : colonne pêche à gauche, contenu à droite */
+  aside { grid-column: 1; grid-row: 1; }
+  main { grid-column: 2; grid-row: 1; min-width: 0; }
+
   /* Colonne latérale */
   aside {
     background: var(--peach);
@@ -182,7 +186,8 @@
   /* Mobile */
   @media (max-width: 820px) {
     .layout { grid-template-columns: 1fr; }
-    aside { order: 2; padding: 2.5rem 1.5rem; }
+    main { grid-column: 1; grid-row: 1; }
+    aside { grid-column: 1; grid-row: 2; padding: 2.5rem 1.5rem; }
     .aside-inner { position: static; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 2rem; }
     aside h2:first-child, aside h2 { margin-top: 1.5rem; }
     main { padding-top: 2.5rem; }
