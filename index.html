@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fabienne Rangeard – Chargée de la démarche qualité</title>
-<meta name="description" content="Fabienne Rangeard, chargée de la démarche qualité en formation : suivi qualité de parcours RNCP, audits Qualiopi, indicateurs et tableaux de bord, amélioration continue.">
+<title>Fabienne Rangeard – Chargée assurance qualité pédagogique</title>
+<meta name="description" content="Fabienne Rangeard, chargée assurance qualité pédagogique : suivi qualité de parcours RNCP, audits Qualiopi, pilotage par les indicateurs, ingénierie pédagogique.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap" rel="stylesheet">
@@ -86,44 +86,6 @@
     display: inline-block;
   }
 
-  /* Frise chronologique */
-  .frise {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    position: relative;
-  }
-  .frise::before {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    top: 2.35rem;
-    height: 2px;
-    background: var(--rule);
-  }
-  .frise li { position: relative; padding-right: 1rem; }
-  .frise .years {
-    display: block;
-    font-family: var(--serif);
-    font-weight: 600;
-    color: var(--slate);
-    font-size: .98rem;
-    height: 1.8rem;
-  }
-  .frise .dot {
-    display: block;
-    width: 14px; height: 14px;
-    margin: .2rem 0 .9rem;
-    border-radius: 50%;
-    background: var(--paper);
-    border: 3px solid var(--slate);
-    position: relative;
-  }
-  .frise li:last-child .dot { background: var(--slate); }
-  .frise .title { display: block; font-weight: 700; color: var(--ink); line-height: 1.35; font-size: .98rem; }
-
   /* Expérience */
   .job { margin-bottom: 2.6rem; }
   .job-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem 1rem; max-width: 46rem; }
@@ -146,16 +108,12 @@
   /* Formations */
   .degrees { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
   .degrees li {
-    display: grid;
-    grid-template-columns: 4.5rem 1fr;
-    gap: 1rem;
     padding: .8rem 0;
     border-top: 1px solid var(--rule);
   }
   .degrees li:last-child { border-bottom: 1px solid var(--rule); }
-  .degrees .year { font-family: var(--serif); font-weight: 600; color: var(--slate); }
   .degrees strong { display: block; font-weight: 700; }
-  .degrees em { color: var(--muted); }
+  .degrees em { display: block; color: var(--muted); }
 
   /* Bandeau compétences en 4 colonnes */
   .atouts { background: var(--peach); padding: 3rem 0; margin: 0; }
@@ -180,13 +138,8 @@
   @media (max-width: 900px) {
     .atouts .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
-  /* Mobile : la frise devient verticale */
+  /* Mobile */
   @media (max-width: 720px) {
-    .frise { grid-template-columns: 1fr; padding-left: 1.6rem; }
-    .frise::before { left: 6px; right: auto; top: .4rem; bottom: .4rem; width: 2px; height: auto; }
-    .frise li { padding: 0 0 1.1rem; }
-    .frise .dot { position: absolute; left: -1.6rem; top: .25rem; margin: 0; }
-    .frise .years { height: auto; }
     .atouts .grid { grid-template-columns: 1fr; gap: 1.5rem; }
   }
 
@@ -204,26 +157,14 @@
 <div class="wrap">
   <header class="hero">
     <h1>Fabienne Rangeard</h1>
-    <p class="role">Chargée de la démarche qualité</p>
+    <p class="role">Chargée assurance qualité pédagogique</p>
     <ul class="contact">
       <li><a href="mailto:frangeard@gmail.com">frangeard@gmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/frangeard" rel="noopener">linkedin.com/in/frangeard</a></li>
       <li>Chantepie (35)</li>
     </ul>
-    <p class="intro">Professionnelle de l’assurance qualité en formation, avec plus de 10 ans d’expérience dans l’éducation. Je pilote des démarches d’amélioration continue fondées sur des données : suivi qualité de parcours certifiants RNCP, audits et constitution de preuves Qualiopi, analyse de la progression et de l’insertion des apprenants, tableaux de bord et bilans. Rigoureuse, avec un esprit d’analyse et de synthèse, je fais le lien entre les équipes pédagogiques, le service support et les responsables de formation pour transformer les constats en actions suivies.</p>
+    <p class="intro">Professionnelle de l’assurance qualité dans le secteur de la formation avec plus de 10 ans d’expérience dans l’éducation, j’accompagne les équipes de conception pour garantir l’excellence des contenus éducatifs et maximiser la réussite des apprenants. Je m’appuie sur mes compétences en ingénierie pédagogique, l’intégration d’outils technologiques et ma rigueur en gestion de projets pour aligner les exigences pédagogiques et les objectifs opérationnels.</p>
   </header>
-
-  <section aria-labelledby="frise">
-    <h2 id="frise">Parcours</h2>
-    <ol class="frise">
-      <li><span class="years">1997 – 2006</span><span class="dot" aria-hidden="true"></span><span class="title">Cheffe de projets de traduction</span></li>
-      <li><span class="years">2007 – 2012</span><span class="dot" aria-hidden="true"></span><span class="title">Cheffe de projets de localisation</span></li>
-      <li><span class="years">2014 – 2021</span><span class="dot" aria-hidden="true"></span><span class="title">Enseignante de langues vivantes</span></li>
-      <li><span class="years">2021 – 2022</span><span class="dot" aria-hidden="true"></span><span class="title">Cheffe de projets de traduction</span></li>
-      <li><span class="years">2022 – 2023</span><span class="dot" aria-hidden="true"></span><span class="title">Cheffe d’équipe de traduction</span></li>
-      <li><span class="years">Depuis 2023</span><span class="dot" aria-hidden="true"></span><span class="title">Chargée assurance qualité pédagogique</span></li>
-    </ol>
-  </section>
 
   <section aria-labelledby="experience">
     <h2 id="experience">Expérience</h2>
@@ -239,31 +180,27 @@
         <h4>Chargée assurance qualité pédagogique <span class="when">depuis 2023</span></h4>
         <ul>
           <li>Suivi qualité de 15 à 20 parcours certifiants RNCP : révision des scénarios pédagogiques et des contenus, identification de points d’attention, propositions d’amélioration.</li>
-          <li>Création et mise à jour de procédures et checklists qualité, et accompagnement de leur adoption par les équipes.</li>
-          <li>Animation de sessions de calibration pour harmoniser les pratiques.</li>
-          <li>Suivi d’indicateurs et maintenance de tableaux de bord (Tableau, Looker Studio) : analyse de tendances, identification des risques et recommandations.</li>
-          <li>Analyse de l’impact des parcours (qualité pédagogique, progression et insertion des apprenants) et rédaction de bilans qualité.</li>
-          <li>Participation à l’audit annuel d’un catalogue de 500+ cours, pilotage de l’audit qualitatif de 600 soutenances par an, constitution de preuves pour les audits Qualiopi.</li>
-          <li>Gestion de projets d’assurance qualité : pilotage de chantiers trimestriels thématiques, identification d’alertes, réunions de suivi, comptes rendus et plans d’action.</li>
-          <li>Traitement des retours apprenants et mentors dans les délais définis : priorisation, suivi des corrections, repérage de tendances pour orienter les évolutions.</li>
-          <li>Intégration de l’IA : traitement de volumes massifs de retours apprenants (rapports de tendances, tickets d’action), automatisation des audits de soutenances.</li>
-          <li>Collaboration avec 5 ingénieurs pédagogiques, 3 responsables de formation et 15 experts métiers. Interface stratégique avec les équipes support et conception des formations.</li>
+          <li>Audits : participation à l’audit annuel d’un catalogue de 500+ cours, pilotage de l’audit qualitatif de 600 soutenances par an, constitution de preuves pour les audits Qualiopi.</li>
+          <li>Création et mise à jour de procédures et checklists qualité, accompagnement de leur adoption par les équipes et animation de sessions de calibration pour harmoniser les pratiques.</li>
+          <li>Pilotage par les indicateurs (Tableau, Looker Studio) : analyse de l’impact des parcours (qualité pédagogique, progression et insertion des apprenants), identification des risques, rédaction de bilans qualité et recommandations.</li>
+          <li>Gestion de projets qualité : pilotage de chantiers trimestriels thématiques, identification d’alertes, réunions de suivi, comptes rendus et plans d’action.</li>
+          <li>Traitement des retours apprenants et mentors dans les délais définis : priorisation, suivi des corrections, repérage de tendances pour orienter les évolutions des parcours.</li>
+          <li>Intégration de l’IA : analyse de volumes massifs de retours apprenants (rapports de tendances, tickets d’action), automatisation des audits de soutenances.</li>
+          <li>Collaboration avec 5 ingénieurs pédagogiques, 3 responsables de formation et 15 experts métiers.</li>
         </ul>
       </div>
 
       <div class="post">
         <h4>Cheffe d’équipe de traduction <span class="when">2022 – 2023</span></h4>
         <ul>
-          <li>Encadrement et accompagnement d’une équipe de 3 chefs de projets de traduction.</li>
-          <li>Coordination de la charge de travail de l’équipe et amélioration des processus.</li>
+          <li>Encadrement d’une équipe de 3 chefs de projets de traduction : répartition de la charge de travail, accompagnement et amélioration des processus.</li>
         </ul>
       </div>
 
       <div class="post">
         <h4>Cheffe de projets de traduction <span class="when">2021 – 2022</span></h4>
         <ul>
-          <li>Gestion de projets de traduction et d’adaptation culturelle de contenus éducatifs.</li>
-          <li>Coordination des parties prenantes internes et externes.</li>
+          <li>Gestion de projets de traduction et d’adaptation culturelle de contenus éducatifs, coordination des parties prenantes internes et externes.</li>
         </ul>
       </div>
     </article>
@@ -282,8 +219,9 @@
           <li>Mise en place d’un apprentissage différencié et suivi individualisé des apprenants.</li>
           <li>Préparation aux examens nationaux de fin de cycle.</li>
           <li>Coordination pédagogique du premier cycle de collège et harmonisation des pratiques pour l’ensemble du département de langues étrangères.</li>
-          <li>Professeure principale au lycée : accompagnement des projets postsecondaires.</li>
+          <li>Professeure principale au lycée : accompagnement des projets post-secondaires.</li>
           <li>Participation régulière à des initiatives de développement professionnel.</li>
+          <li>Organisation de séjours linguistiques en Espagne.</li>
         </ul>
       </div>
     </article>
@@ -291,19 +229,14 @@
     <article class="job">
       <div class="job-head">
         <h3>Expériences antérieures</h3>
-        <span class="when">1997 – 2012</span>
       </div>
       <p class="where">Angleterre</p>
       <div class="post">
-        <h4>Cheffe de projets de localisation, Motorola Mobility <span class="when">2007 – 2012</span></h4>
+        <h4>15 ans en gestion de projets de traduction et localisation, dont 5 ans pour Motorola Mobility</h4>
         <ul>
-          <li>Pilotage de projets de localisation de l’anglais vers 25 langues : tests linguistiques et contrôle qualité, gestion des prestataires et des parties prenantes.</li>
-        </ul>
-      </div>
-      <div class="post">
-        <h4>Cheffe de projets de traduction, ITR Ltd. <span class="when">1997 – 2006</span></h4>
-        <ul>
-          <li>Gestion de projets de traduction multilingues et coordination de prestataires.</li>
+          <li>Pilotage de la traduction et tests linguistiques de logiciels de l’anglais vers 25 langues.</li>
+          <li>Coordination de multiples versions produits destinés à 30+ modèles de portables.</li>
+          <li>Gestion des prestataires et des parties prenantes internes.</li>
         </ul>
       </div>
     </article>
@@ -312,10 +245,12 @@
   <section aria-labelledby="formations">
     <h2 id="formations">Formations</h2>
     <ul class="degrees">
-      <li><span class="year">2025</span><span><strong>L’IA au service de l’ingénierie pédagogique</strong><em>Formation interne, OpenClassrooms</em></span></li>
-      <li><span class="year">2014</span><span><strong>Qualified Teacher Status (habilitation à enseigner) et PGCE (sciences de l’éducation)</strong><em>University of Sussex, Brighton, Angleterre</em></span></li>
-      <li><span class="year">1998</span><span><strong>Master of Arts, Applied Linguistics</strong><em>Birkbeck College, University of London, Angleterre</em></span></li>
-      <li><span class="year">1992</span><span><strong>Licence LLCE</strong><em>Université Catholique de l’Ouest, Angers</em></span></li>
+      <li><strong>L’IA au service de l’ingénierie pédagogique</strong><em>Formation interne, OpenClassrooms</em></li>
+      <li><strong>Habilitation à enseigner (QTS)</strong><em>Department of Education, Angleterre</em></li>
+      <li><strong>Diplôme universitaire de formation des enseignants (PGCE)</strong><em>University of Sussex, Brighton, Angleterre</em></li>
+      <li><strong>Master en linguistique appliquée (Bac+5)</strong><em>Birkbeck College, University of London, Angleterre</em></li>
+      <li><strong>Diplôme de traduction quadrilingue</strong></li>
+      <li><strong>Licence LLCER</strong><em>Université Catholique de l’Ouest, Angers</em></li>
     </ul>
   </section>
 </div>
@@ -325,8 +260,7 @@
     <div>
       <h2>Savoir-faire</h2>
       <ul>
-        <li>Démarche qualité</li>
-        <li>Amélioration continue</li>
+        <li>Démarche qualité et amélioration continue</li>
         <li>Formalisation de procédures</li>
         <li>Suivi de plans d’action</li>
         <li>Réalisation d’audits</li>
@@ -354,9 +288,10 @@
         <li>Google Workspace</li>
         <li>Notion</li>
         <li>Tableau</li>
-        <li>Looker Studio</li>
         <li>Wrike</li>
-        <li>Outils d’IA : Gemini, Notion AI, Claude</li>
+        <li>Salesforce</li>
+        <li>Looker Studio</li>
+        <li>Outils d’IA : Gemini, NotebookLM, Notion AI, Claude</li>
       </ul>
     </div>
     <div>
